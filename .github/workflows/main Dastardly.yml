@@ -10,7 +10,7 @@ jobs:
             continue-on-error: true                        
             uses: PortSwigger/dastardly-github-action@main
             with:
-              target-url: 'https://defendtheweb.net/'
+              target-url: 'https://www.hackthissite.org/pages/index/index.php'
         
           - name: Publish Test Report
             if: always()                                    
@@ -20,3 +20,7 @@ jobs:
               require_tests: true
               junit allowEmptyResults: true, 
               testResults: '**/test-results/*.xml'
+        permissions:
+                    contents: read
+                    checks: write
+                    id-token: write
