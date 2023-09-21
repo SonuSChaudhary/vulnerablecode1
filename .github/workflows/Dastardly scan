@@ -18,4 +18,5 @@ jobs:
             with:
               report_paths: '**/dastardly-report.xml'       
               require_tests: true
-                junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
+              junit allowEmptyResults: true, 
+              testResults: '**/test-results/*.xml'
