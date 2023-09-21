@@ -10,13 +10,13 @@ jobs:
             continue-on-error: true                        
             uses: PortSwigger/dastardly-github-action@main
             with:
-              target-url: 'https://ginandjuice.shop'
+              target-url: 'https://demo.testfire.net/'
         
           - name: Publish Test Report
             if: always()                                    
             uses: mikepenz/action-junit-report@v3
             with:
-              report_paths: '**defendtheweb-report.xml'       
+              report_paths: '**demo-report.xml'       
               require_tests: true
               junit allowEmptyResults: true, 
               testResults: '**/test-results/*.xml'
